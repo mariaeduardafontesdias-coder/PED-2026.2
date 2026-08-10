@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float raio, area;
+
+    scanf("%f", &raio);
+
+    area = M_PI * raio * raio;
+
+    printf("%.2f\n", area);
+
+    return 0;
+}
