@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int A, B;
+
+    scanf("%d", &A);
+    scanf("%d", &B);
+
+    A = A + B;
+    B = A - B;
+    A = A - B;
+
+    printf("A = %d\n", A);
+    printf("B = %d\n", B);
+
+    return 0;
+}

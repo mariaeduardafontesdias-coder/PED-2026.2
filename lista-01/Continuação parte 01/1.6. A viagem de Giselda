@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+
+    float kmPorLitro;
+    float distancia;
+    float precoCombustivel;
+    int pessoas;
+
+    float litros;
+    float custoTotal;
+    float custoPorPessoa;
+
+    printf("Quantos km o carro percorre por litro? ");
+    scanf("%f", &kmPorLitro);
+
+    printf("Quantos km a viagem terá? ");
+    scanf("%f", &distancia);
+
+    printf("Qual o valor do combustivel? ");
+    scanf("%f", &precoCombustivel);
+
+    printf("Quantas pessoas vao dividir a conta? ");
+    scanf("%d", &pessoas);
+
+    litros = distancia / kmPorLitro;
+
+    custoTotal = litros * precoCombustivel;
+
+    custoPorPessoa = custoTotal / pessoas;
+
+    printf("Cada pessoa vai gastar: R$ %.2f\n", custoPorPessoa);
+
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int A, B, aux;
+
+    scanf("%d", &A);
+    scanf("%d", &B);
+
+    aux = A;
+    A = B;
+    B = aux;
+
+    printf("A = %d\n", A);
+    printf("B = %d\n", B);
+
+    return 0;
+}
