@@ -1,0 +1,17 @@
+soma = 0
+quantidade = 0
+
+numero = int(input("Digite um número (-1 para parar): "))
+
+while numero != -1:
+    soma = soma + numero
+    quantidade = quantidade + 1
+
+    numero = int(input("Digite um número (-1 para parar): "))
+
+if quantidade > 0:
+    media = soma / quantidade
+    print("Quantidade de números:", quantidade)
+    print("Média:", media)
+else:
+    print("Nenhum número foi digitado.")
