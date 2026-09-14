@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int sequencia(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+
+    return 3 * sequencia(n - 1);
+}
+
+int main()
+{
+    int n;
+    int resultado;
+
+    printf("Digite a posicao da sequencia: ");
+    scanf("%d", &n);
+
+    resultado = sequencia(n);
+
+    printf("Valor da sequencia: %d\n", resultado);
+
+    return 0;
+}
+

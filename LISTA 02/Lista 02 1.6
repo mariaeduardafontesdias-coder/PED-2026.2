@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void intervaloCrescente(int a, int b)
+{
+    if (a > b)
+    {
+        return;
+    }
+
+    printf("%d", a);
+
+    if (a < b)
+    {
+        printf(",");
+    }
+
+    intervaloCrescente(a + 1, b);
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &b);
+
+    intervaloCrescente(a, b);
+
+    printf("\n");
+
+    return 0;
+}
+

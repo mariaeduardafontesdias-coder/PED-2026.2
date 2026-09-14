@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void intervaloDecrescente(int a, int b)
+{
+    if (b < a)
+    {
+        return;
+    }
+
+    printf("%d", b);
+
+    if (b > a)
+    {
+        printf(",");
+    }
+
+    intervaloDecrescente(a, b - 1);
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &b);
+
+    intervaloDecrescente(a, b);
+
+    printf("\n");
+
+    return 0;
+}
