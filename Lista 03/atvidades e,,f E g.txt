@@ -1,0 +1,27 @@
+Declarar dois ponteiros:
+
+int *v1;
+int *v2;
+
+
+Alocar v1 usando:
+
+preenche = FALSE
+
+  exemplo:
+
+n = 5;
+
+Então:
+
+v1 = aloca(n, FALSE);
+
+
+Alocar v2 - preenche = TRUE
+
+Então:
+
+v2 = aloca(n, TRUE);
+
+Como usei calloc, v2 começa preenchido com zeros.
+
