@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "pilha.h"
+
+// Escolhi array porque é mais simples para iniciantes
+// e é suficiente para guardar os caracteres.
+
+void inicializar(Pilha *p) {
+    p->topo = -1;
+}
+
+int pilha_vazia(Pilha *p) {
+    return p->topo == -1;
+}
+
+void push(Pilha *p, char c) {
+    p->topo++;
+    p->dados[p->topo] = c;
+}
+
+char pop(Pilha *p) {
+    if (pilha_vazia(p)) {
+        printf("Pilha vazia!\n");
+        exit(1);
+    }
+
+    char c = p->dados[p->topo];
+    p->topo--;
+
+    return c;
+}
