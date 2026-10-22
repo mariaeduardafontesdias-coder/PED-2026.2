@@ -1,6 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "pilha.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    int *dados;           // ponteiro para o início do bloco contíguo
+    int tamanho_alocado;  // posições reservadas
+    int topo;             // antes chamado tamanho_ocupado
+} Pilha;
+
+Pilha *criar(int capacidade) {  // capacidade deve ser maior que 0
+    Pilha *p = malloc(sizeof(Pilha));
+    p->dados = malloc(capacidade * sizeof(int));
+    p->tamanho_alocado = capacidade;
+    p->topo = 0;
+    return p;
+}
+
 
 // Escolhi array porque é mais simples para iniciantes
 // e é suficiente para guardar os caracteres.

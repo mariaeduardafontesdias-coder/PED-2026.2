@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include "pilha.h"
+
+int main() {
+    Pilha p;
+    char expressao[MAX];
+    char c, abertura;
+    int correta = 1;
+
+    inicializar(&p);
+
+    printf("Digite a expressao: ");
+    fgets(expressao, MAX, stdin);
+
+    for (int i = 0; expressao[i] != '\0'; i++) {
+        c = expressao[i];
+
+        if (c == '(' || c == '[' || c == '{') {
+            push(&p, c);
+        }
+
+        if (c == ')' || c == ']' || c == '}') {
+            if (pilha_vazia(&p)) {
+                correta = 0;
+                break;
+            }
+
+            abertura = pop(&p);
+
+            if ((c == ')' && abertura != '(') ||
+                (c == ']' && abertura != '[') ||
+                (c == '}' && abertura != '{')) {
+                correta = 0;
+                break;
+            }
+        }
+    }
+
+    if (!pilha_vazia(&p)) {
+        correta = 0;
+    }
+
+    if (correta == 1) {
+        printf("Expressao balanceada!\n");
+    } else {
+        printf("Expressao nao balanceada!\n");
+    }
+
+    return 0;
+}
